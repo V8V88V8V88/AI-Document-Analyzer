@@ -1,0 +1,16 @@
+[project]
+name = "ai-document-reader"
+version = "1.0.0"
+description = "AI-powered document reader with summarization, Q&A, and quiz features"
+requires-python = ">=3.11"
+dependencies = [
+    "alembic>=1.16.2",
+    "google-genai>=1.24.0",
+    "openai>=1.93.0",
+    "psycopg2-binary>=2.9.10",
+    "pydantic>=2.11.7",
+    "pypdf2>=3.0.1",
+    "sift-stack-py>=0.7.0",
+    "sqlalchemy>=2.0.41",
+    "streamlit>=1.46.1",
+]

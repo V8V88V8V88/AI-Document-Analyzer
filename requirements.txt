@@ -1,0 +1,10 @@
+streamlit
+openai
+PyPDF2
+google-generativeai
+sqlalchemy
+pydantic
+psycopg2-binary
+alembic
+sift-stack-py
+python-dotenv 
