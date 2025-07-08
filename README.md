@@ -1,75 +1,106 @@
-# AI Document Reader
+# PDFPaglu: AI Document Assistant
 
-This is a Streamlit web application that allows you to chat with your documents using the power of Google's Gemini AI.
+A modern, privacy-first web app to chat with your documents, powered by Google Gemini AI and OpenAI GPT-4o.  
+Upload any PDF or TXT file and instantly get summaries, Q&A, quizzes, and more—all in a sleek, distraction-free dark interface.
 
-## Features
+---
 
--   **Interactive Chat:** Ask questions about your documents and get intelligent answers.
--   **Document-Based Knowledge:** The AI's responses are based solely on the content of your uploaded documents.
--   **Secure and Private:** Your documents and conversations are not stored or used for any other purpose.
--   **Modern UI:** A clean and intuitive user interface inspired by ChatGPT.
+## ✨ Features
 
-## Getting Started
+- **Chat with Your Documents:**  
+  Instantly ask questions and get intelligent, context-aware answers based on your uploaded file.
+
+- **Smart Summaries:**  
+  Receive concise, AI-generated overviews of any document.
+
+- **Quiz Yourself:**  
+  Auto-generate quizzes to test your understanding of the material.
+
+- **Draft Emails:**  
+  Let the AI help you compose emails based on document content.
+
+- **Key Insights Extraction:**  
+  Highlight the most important points in seconds.
+
+- **Beautiful, Minimal UI:**  
+  Pure black theme, subtle white borders, and zero blue—designed for focus and style.
+
+- **No Data Retention:**  
+  Your files and chats are never stored or shared.
+
+---
+
+## 🚀 Quickstart
 
 ### Prerequisites
 
--   Python 3.7+
--   An API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
+- Python 3.7+
+- API key from [Google AI Studio](https://aistudio.google.com/app/apikey)
 
 ### Installation
 
-1.  **Clone the repository:**
-    ```bash
-    git clone https://github.com/your-username/ai-document-reader.git
-    cd ai-document-reader
+```bash
+git clone https://github.com/v8v88v8v88/AI-Document-Analyzer.git
+cd AI-Document-Analyzer
+pip install -r requirements.txt
+```
+
+### Configuration
+
+1. Create a `.env` file in the project root:
     ```
-
-2.  **Install the dependencies:**
-    ```bash
-    pip install -r requirements.txt
+    GEMINI_API_KEY="YOUR_API_KEY_HERE"
     ```
+2. (Optional) Add any other environment variables as needed.
 
-3.  **Set up your environment variables:**
-    -   Create a file named `.env` in the root of the project.
-    -   Add your Google AI API key to the `.env` file as follows:
-        ```
-        GEMINI_API_KEY="YOUR_API_KEY_HERE"
-        ```
-
-### Running the Application
-
-Once you have completed the installation and setup, you can run the application with the following command:
+### Run the App
 
 ```bash
 streamlit run app.py
 ```
+Open [http://localhost:8501](http://localhost:8501) in your browser.
 
-The application will be available at `http://localhost:8501`.
+---
 
-## Usage
+## 🖤 UI Preview
 
-1. Upload a document (PDF or TXT format)
-2. Choose your interaction mode:
-   - **Summary**: Get a concise summary of the document
-   - **Q&A**: Ask specific questions about the content
-   - **Quiz**: Take an interactive quiz based on the material
+- Pure black background, no blue tones
+- Sidebar-free, full-width layout
+- Modern cards with white borders for clarity
+- Drag-and-drop file upload, fully themed
 
-## Architecture
+---
 
-- **Frontend**: Streamlit web interface
-- **Document Processing**: PyPDF2 for PDF text extraction
-- **AI Integration**: OpenAI GPT-4o for document analysis
-- **Session Management**: Streamlit session state for user context
+## 🛠️ Tech Stack
 
-## Dependencies
+- **Frontend:** Streamlit (custom dark theme)
+- **AI:** Google Gemini, OpenAI GPT-4o
+- **PDF Processing:** PyPDF2
+- **Database:** SQLAlchemy (for session/history, if enabled)
+- **Other:** Pydantic, Google GenAI
 
-- streamlit
-- openai
-- PyPDF2
-- google-genai
-- sqlalchemy
-- pydantic
+---
 
-## License
+## 📄 Usage
 
-MIT License 
+1. **Upload** a PDF or TXT file.
+2. **Choose an action:**
+    - Get a summary
+    - Ask questions (Q&A)
+    - Take a quiz
+    - Draft an email
+    - Extract key insights
+3. **Enjoy fast, accurate, and private AI assistance!**
+
+---
+
+## 🤝 Contributing
+
+Pull requests and suggestions are welcome!  
+For major changes, please open an issue first to discuss what you’d like to change.
+
+---
+
+## 📜 License
+
+GPLv3 License 
