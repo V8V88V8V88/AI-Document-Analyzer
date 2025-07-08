@@ -1,5 +1,9 @@
 # PDFPaglu: AI Document Assistant
 
+<p align="center">
+  <img src="images/image.png" alt="PDFPaglu Main UI" width="80%"/>
+</p>
+
 A modern, privacy-first web app to chat with your documents, powered by Google Gemini AI and OpenAI GPT-4o.  
 Upload any PDF or TXT file and instantly get summaries, Q&A, quizzes, and more—all in a sleek, distraction-free dark interface.
 
@@ -68,6 +72,22 @@ Open [http://localhost:8501](http://localhost:8501) in your browser.
 - Sidebar-free, full-width layout
 - Modern cards with white borders for clarity
 - Drag-and-drop file upload, fully themed
+
+---
+
+## 📸 Example Screenshots & Steps
+
+**1. Home Screen**  
+<img src="images/image1.png" alt="Home Screen" width="80%"/>
+
+**2. Uploading a Document**  
+<img src="images/image2.png" alt="Upload Document" width="80%"/>
+
+**3. Chatting with the Document**  
+<img src="images/image3.png" alt="Chat Example" width="80%"/>
+
+**4. Quiz Mode Example**  
+<img src="images/image4.png" alt="Quiz Example" width="80%"/>
 
 ---
 
