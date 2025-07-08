@@ -65,7 +65,7 @@ def reset_document_state():
 
 def main():
     st.set_page_config(
-        page_title="PDFPaglu",
+        page_title="PDFPaglu: AI Document Assistant",
         page_icon="📄",
         layout="wide",
         initial_sidebar_state="expanded"
@@ -84,6 +84,38 @@ def main():
         html, body, .main, .block-container, .stApp {
             background-color: #000000 !important;
         }
+        /* Hide the Streamlit sidebar and collapse arrow */
+        [data-testid="stSidebar"] {display:none !important;}
+        [data-testid="stSidebarCollapseControl"] {display:none !important;}
+        .sidebar-toggle-container {display:none !important;}
+        .suggestion-card {
+            background-color: var(--secondary-background-color);
+            border: 1px solid rgba(255, 255, 255, 0.25);
+            border-radius: 12px;
+            padding: 1rem;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .suggestion-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+        }  
+
+        /* Style the file uploader drop zone */
+        .stFileUploader > div {
+            background-color: #000000 !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            border-radius: 8px !important;
+        }
+        .stFileUploader > div:hover {
+            border-color: rgba(255, 255, 255, 0.4) !important;
+        }
+        /* Stronger selector for uploader dropzone */
+        .stFileUploader [data-testid="stFileDropzone"] {
+            background-color: #000000 !important;
+            border: 1px solid rgba(255, 255, 255, 0.25) !important;
+            border-radius: 8px !important;
+        }
         </style>
         """,
         unsafe_allow_html=True,
@@ -93,14 +125,6 @@ def main():
     doc_processor = DocumentProcessor()
     ai_assistant = AIAssistant()
     
-    # Sidebar toggle icon (always visible)
-    st.markdown('<div class="sidebar-toggle-container">', unsafe_allow_html=True)
-    toggle_label = "☰" if st.session_state.sidebar_collapsed else "✕"
-    if st.button(toggle_label, key="sidebar_toggle_btn"):
-        st.session_state.sidebar_collapsed = not st.session_state.sidebar_collapsed
-        st.rerun()
-    st.markdown('</div>', unsafe_allow_html=True)
-
     # Apply collapsed state via CSS
     if st.session_state.sidebar_collapsed:
         st.markdown("""
@@ -169,7 +193,7 @@ def show_initial_view(doc_processor, ai_assistant):
     """Shows the initial screen with a welcome message and suggestions."""
     st.markdown("""
     <div style="text-align: center; padding-top: 10vh;">
-        <h1 style="font-weight: 600;">PDFPaglu</h1>
+        <h1 style="font-weight: 600;">PDFPaglu: AI Document Assistant</h1>
     </div>
     """, unsafe_allow_html=True)
     
